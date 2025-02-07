@@ -305,10 +305,8 @@
 
 
 {% block javascriptFooter %}
-	
-		<script type="text/javascript">
-
-			var bg1URL = "{{ asset('img/bg1.jpg') }}";
+	<script type="text/javascript">
+		var bg1URL = "{{ asset('img/bg1.jpg') }}";
 var bg2URL = "{{ asset('img/bg2.jpg') }}";
 var bg3URL = "{{ asset('img/bg3.jpg') }}";
 document.querySelector(".rev_slider_wrapper").setAttribute("style", "background:url('" + (
@@ -383,5 +381,5 @@ levels: [
 
 });
 });
-		</script>
-	{% endblock %}
+	</script>
+{% endblock %}

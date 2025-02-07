@@ -191,7 +191,9 @@
 							<div class="input-field" style="margin-top: 5px;">
 								<select id="job_sector" name="job_sector[]" multiple data-placeholder="Type in or Select job sector you would be interested in.">
 									<option value="">Choose an option...</option>
-									<option value="">job sector</option>
+									{% for candidate in candidates.job %}
+										<option value="">{{candidates.job}}</option>
+									{% endfor %}
 								</select>
 								<label for="job_sector" class="active">Interest in job sector</label>
 							</div>
@@ -244,6 +246,11 @@
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-xs-12 mt-40 mb-80 delete-account">
+						<a href="{{path('app_logout')}}" class="btn btn-block btn-lg waves-effect waves-light">
+							Se déconnecter</a>
+					</div>
 				<div class="row">
 					<div class="col-xs-12 mt-40 mb-80 delete-account">
 						<a href="#!" onclick="return prompt('Please Type \'Delete my account\' to delete your K-Yachting Services account:') == 'Delete my account'" class="btn btn-block btn-lg waves-effect waves-light">
